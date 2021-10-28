@@ -26,7 +26,7 @@ export default function Home() {
     changingSides: false
   });
 
-   const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   // show error for 5 seconds
   useEffect(() => {
