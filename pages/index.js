@@ -38,6 +38,7 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, [state.error]);
 
+  // debouncing translate function
   const timedTranslate = (e) => {
     if (!e.target.value)
       return setState((state) => ({ ...state, text: "", translatedText: "", changingSides: false }));
@@ -78,10 +79,20 @@ export default function Home() {
     translate(state.text);
   }, [state.from, state.to]);
 
-  // copy text to clipboard 
+  // copy text to clipboard on all devices
   const copyToCilpBoard = () => {
-    navigator.clipboard.writeText(state.translatedText);
-    setState(state => ({...state, copyText: {...state.copyText, copied: true}, changingSides: false}));
+    const elem = document.createElement('textarea');
+    elem.value = state.translatedText;
+    
+    document.body.appendChild(elem);
+
+    elem.select();
+    
+    document.execCommand('copy');
+
+    document.body.removeChild(elem);
+
+    setState(state => ({ ...state, copyText: { ...state.copyText, copied: true }, changingSides: false }));
   }
 
   // reverse translation sides
