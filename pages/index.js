@@ -111,7 +111,7 @@ export default function Home() {
  
 
   return (
-    <div className="flex items-center justify-center min-h-screen py-2 bg-gray-900 relative">
+    <div className="flex items-center justify-center min-h-screen py-2 pt-10 bg-gray-900 relative">
       <Head>
         <title>Translator</title>
         <link rel="icon" href="/logo.png" />
