@@ -1,25 +1,18 @@
 {
   "private": true,
   "scripts": {
-    "dev": "nodemon --watch server server/app.js",
+    "dev": "next dev",
     "build": "next build",
-    "start": "node server/app.js"
+    "start": "next start"
   },
   "dependencies": {
     "axios": "^0.24.0",
-    "compression": "^1.7.4",
-    "cookie-parser": "^1.4.5",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
     "framer-motion": "^5.0.0",
-    "hpp": "^0.2.3",
-    "morgan": "^1.10.0",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "translatte": "^3.0.1",
-    "xss-clean": "^0.1.1"
+    "translatte": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
